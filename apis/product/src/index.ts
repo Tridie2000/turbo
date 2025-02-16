@@ -1,15 +1,18 @@
 import Express from "express";
+import { createDatabase } from "sqlite";
 
-const app = Express();
+createDatabase("products");
+
+export const app = Express();
 
 app.get("/", (_, res) => {
   res.status(200).send({ status: "ok" });
 });
 
 try {
-  app.listen({ port: 6001 }, (error) => {
+  app.listen({ port: 6002 }, (error) => {
     if (error) console.error(error);
-    console.info(`Healthz API listening on port 6001`);
+    console.info(`Product API listening on port 6002`);
   });
 } catch (err) {
   console.error(err);

@@ -1,16 +1,14 @@
 {
-  "name": "healthz",
+  "name": "product",
   "version": "1.0.0",
   "private": true,
-  "description": "Healthz api",
+  "description": "Product api",
   "scripts": {
     "build": "tsc && esbuild src/index.ts --bundle --platform=node --target=node22 --outfile=dist/bundle.js --sourcemap --minify",
     "dev": "tsx watch --clear-screen=false src/index.ts"
   },
   "dependencies": {
-    "express": "^5.0.0"
-  },
-  "devDependencies": {
-    "@types/express": "^5.0.0"
+    "express": "^5.0.0",
+    "sqlite": "*"
   }
 }
