@@ -1,0 +1,13 @@
+{
+  "name": "healthz",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Healthz api",
+  "scripts": {
+    "build": "tsc && esbuild src/index.ts --bundle --platform=node --target=node22 --outfile=dist/bundle.js --sourcemap --minify",
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "fastify": "^5.2.1"
+  }
+}
